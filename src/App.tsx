@@ -25,10 +25,10 @@ const router = createBrowserRouter(
       <Route index element={<HomePage />} />
       <Route path="/form">
         <Route index element={<FormPage />} />
-        <Route path=":id" element={<FormPage />} />
+        <Route path=":uid" element={<FormPage />} />
       </Route>
-      <Route path="/detail/:id" element={<DetailPage />} />
-      <Route path="/exec/:id" element={<ExecPage />} />
+      <Route path="/detail/:uid" element={<DetailPage />} />
+      <Route path="/exec/:uid" element={<ExecPage />} />
     </Route>
   )
 );

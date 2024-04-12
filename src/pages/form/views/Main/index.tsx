@@ -1,11 +1,18 @@
-import { Form, Input } from 'antd';
+import { Flex, Form, Input, Spin } from 'antd';
 import BlockBox from '@pages/form/components/BlockBox';
 import Phase from '@pages/form/components/Phase';
 import { PlanFormModel } from '@pages/form/types';
 import { useFormModel } from '@pages/form/models';
 
 const MainView = () => {
-  const { form, confirm } = useFormModel();
+  const { uid, plan, form, confirm } = useFormModel();
+  if (!!uid && !plan) {
+    return (
+      <Flex justify="center">
+        <Spin size="large" />
+      </Flex>
+    );
+  }
   return (
     <Form<PlanFormModel> name="plan" layout="vertical" form={form} onFinish={confirm}>
       <BlockBox title="基础信息">

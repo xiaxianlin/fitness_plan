@@ -24,8 +24,7 @@
   "scripts": {
     "start": "craco start",
     "build": "craco build && mv build docs",
-    "test": "craco test",
-    "eject": "craco eject"
+    "deploy": "rm -rf docs && yarn build"
   },
   "eslintConfig": {
     "extends": [

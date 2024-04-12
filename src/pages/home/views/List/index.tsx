@@ -5,7 +5,7 @@ import { PlusOutlined } from '@ant-design/icons';
 import PlanCard from '@pages/home/components/PlanCard';
 
 const ListView = () => {
-  const { plans } = useHomeModel();
+  const { plans, handleDelete, gotoFormPage, gotoDetailPage } = useHomeModel();
   if (!plans) {
     return (
       <Flex justify="center">
@@ -30,7 +30,13 @@ const ListView = () => {
       {plans.map((plan) => {
         return (
           <Col className="home-item" span={8}>
-            <PlanCard key={plan.uid} plan={plan} />
+            <PlanCard
+              key={plan.uid}
+              plan={plan}
+              onEdit={() => gotoFormPage(plan.uid!)}
+              onDetail={() => gotoDetailPage(plan.uid!)}
+              onRemove={() => handleDelete(plan)}
+            />
           </Col>
         );
       })}

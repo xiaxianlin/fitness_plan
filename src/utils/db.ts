@@ -6,7 +6,7 @@ class Database extends Dexie {
 
   constructor() {
     super('fitness_plan');
-    this.version(1).stores({ plans: '++id, name' });
+    this.version(1.1).stores({ plans: '++id, uid' });
   }
 }
 
