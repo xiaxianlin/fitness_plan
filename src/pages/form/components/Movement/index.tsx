@@ -44,7 +44,7 @@ const MovementModal: React.FC<MovementModalProps> = ({ group, visible, onCancel,
 
   useEffect(() => {
     visible && form.setFieldsValue(initModel);
-  }, [visible, group, form]);
+  }, [visible, initModel, form]);
 
   return (
     <Modal
