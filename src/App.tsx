@@ -8,10 +8,12 @@ import ExecPage from '@pages/exec';
 
 const Layout = () => {
   return (
-    <Flex vertical>
+    <Flex vertical className="layout">
       <header className="layout-header">FITNESS</header>
       <div className="layout-body">
-        <Outlet />
+        <div className="layout-container">
+          <Outlet />
+        </div>
       </div>
     </Flex>
   );

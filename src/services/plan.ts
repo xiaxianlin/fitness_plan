@@ -11,11 +11,11 @@ export const allPlans = async () => {
   return planService.toArray();
 };
 
-export const deletePlan = async (id: number) => {
-  return planService.where('id').equals(id).delete();
+export const deletePlan = async (uid: string) => {
+  return planService.where('uid').equals(uid).delete();
 };
 
 export const updatePlan = async (plan: Plan) => {
-  const { id, ...update } = plan;
-  return planService.where('id').equals(id!).modify(update);
+  const { uid, ...update } = plan;
+  return planService.where('uid').equals(uid!).modify(update);
 };

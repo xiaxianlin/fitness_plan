@@ -1,0 +1,28 @@
+.home-item {
+  padding: 8px;
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+}
+
+.home-add {
+  flex-grow: 1;
+  border: 1px dashed;
+  border-radius: 8px;
+  color: #aaa;
+  cursor: pointer;
+  transition: color ease-in-out 0.3s;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.03), 0 1px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px 0 rgba(0, 0, 0, 0.02);
+}
+
+.home-add-icon {
+  font-size: 68px;
+}
+
+.home-add:hover {
+  color: #eee;
+}

@@ -1,0 +1,31 @@
+.phase {
+  position: relative;
+}
+.phase-add {
+  font-size: 12px;
+  position: absolute;
+  right: -10px;
+  top: -44px;
+}
+
+.phase-table .ant-table-container {
+  border-start-start-radius: 0;
+  border-start-end-radius: 0;
+}
+
+.phase-table table,
+.phase-table .ant-table {
+  border-radius: 0;
+}
+
+.phase-table .ant-table-container table > thead > tr:first-child > *:first-child {
+  border-start-start-radius: 0;
+}
+
+.phase-table .ant-table-container table > thead > tr:first-child > *:last-child {
+  border-start-end-radius: 0;
+}
+
+.phase-table .ant-empty-normal {
+  margin-block: 12px;
+}

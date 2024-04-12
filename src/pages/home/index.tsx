@@ -1,8 +1,6 @@
-import React from 'react';
+import './index.css';
 import { HomeModel } from './models';
 import ListView from './views/List';
-
-import './index.css';
 
 const HomePage = () => {
   return (

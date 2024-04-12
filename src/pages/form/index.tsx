@@ -1,7 +1,15 @@
-import React from 'react'
+import './index.css';
+import { FormModel } from './models';
+import MainView from './views/Main';
+import FooterView from './views/Footer';
 
 const FormPage = () => {
-    return <div>FormPage</div>
-}
+  return (
+    <FormModel.Provider>
+      <MainView />
+      <FooterView />
+    </FormModel.Provider>
+  );
+};
 
-export default FormPage
+export default FormPage;

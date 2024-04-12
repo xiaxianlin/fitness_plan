@@ -1,0 +1,36 @@
+.form {
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 12px;
+  position: relative;
+  padding-top: 20px;
+}
+
+.form::before {
+  content: '计划表单';
+
+  font-size: 12px;
+  font-weight: bolder;
+  color: #fff;
+  background-color: #aaa;
+  padding: 2px 4px;
+  border-radius: 4px;
+
+  position: absolute;
+  left: 12px;
+  top: -12px;
+}
+
+.form-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+
+  height: 48px;
+  background-color: rgb(20, 20, 20);
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}

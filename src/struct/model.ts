@@ -1,6 +1,6 @@
 export enum MovementType {
-  Timer,
-  Counter,
+  Timer = 'timer',
+  Counter = 'counter',
 }
 
 export interface Movement {
@@ -11,12 +11,13 @@ export interface Movement {
 }
 
 export interface Group {
-  movement: Movement;
+  uid: string;
   count: number;
+  movement: Movement;
 }
 
 export interface Plan {
-  id?: number;
+  uid?: string;
   name: string;
   warm: Group[];
   train: Group[];
