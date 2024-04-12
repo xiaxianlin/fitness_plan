@@ -33,6 +33,10 @@ const router = createBrowserRouter(
   )
 );
 
+ConfigProvider.config({
+  holderRender: (children) => <ConfigProvider theme={{ algorithm: theme.darkAlgorithm }}>{children}</ConfigProvider>,
+});
+
 const App = () => {
   return (
     <ConfigProvider theme={{ algorithm: theme.darkAlgorithm }}>
