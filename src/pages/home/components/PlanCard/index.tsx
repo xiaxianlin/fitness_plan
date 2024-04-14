@@ -20,7 +20,7 @@ const PlanCard: React.FC<PlanCardProps> = ({ plan, onEdit, onDetail, onRemove })
     >
       <Descriptions column={2}>
         <Descriptions.Item label="动作数">{plan.movementCount}</Descriptions.Item>
-        <Descriptions.Item label="预估时长">{plan.trainTime}秒</Descriptions.Item>
+        <Descriptions.Item label="预估时长">{(plan.trainTime / 3600).toFixed(1)}小时</Descriptions.Item>
         <Descriptions.Item label="描述" span={2}>
           {plan.desc}
         </Descriptions.Item>

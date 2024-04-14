@@ -1,7 +1,12 @@
-import React from 'react'
+import { DetailModel } from './models';
+import MainView from './views/Main';
 
 const DetailPage = () => {
-    return <div>DetailPage</div>
-}
+  return (
+    <DetailModel.Provider>
+      <MainView />
+    </DetailModel.Provider>
+  );
+};
 
-export default DetailPage
+export default DetailPage;

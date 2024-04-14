@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useMemo } from 'react';
 import { Flex, Form, FormProps, Input, InputNumber, Modal, Radio } from 'antd';
 import { Group, MovementType } from '@struct/model';
 import * as uuid from 'uuid';
@@ -24,13 +24,16 @@ const MovementModal: React.FC<MovementModalProps> = ({ group, visible, onCancel,
   const [form] = Form.useForm();
   const type = Form.useWatch<MovementType>('type', form);
 
-  const initModel: FormModel = {
-    count: group?.count || 5,
-    name: group?.movement.name || '',
-    reset: group?.movement.reset || 15,
-    action: group?.movement.action || 45,
-    type: group?.movement.type || MovementType.Timer,
-  };
+  const initModel: FormModel = useMemo(
+    () => ({
+      count: group?.count || 5,
+      name: group?.movement.name || '',
+      reset: group?.movement.reset || 15,
+      action: group?.movement.action || 45,
+      type: group?.movement.type || MovementType.Timer,
+    }),
+    [group]
+  );
 
   const cancel = () => {
     form.resetFields();
@@ -44,7 +47,7 @@ const MovementModal: React.FC<MovementModalProps> = ({ group, visible, onCancel,
 
   useEffect(() => {
     visible && form.setFieldsValue(initModel);
-  }, [visible, initModel, form]);
+  }, [visible, initModel]);
 
   return (
     <Modal

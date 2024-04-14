@@ -1,8 +1,8 @@
 import { Flex, Form, Input, Spin } from 'antd';
-import BlockBox from '@pages/form/components/BlockBox';
 import Phase from '@pages/form/components/Phase';
 import { PlanFormModel } from '@pages/form/types';
 import { useFormModel } from '@pages/form/models';
+import { BlockBox } from '@components';
 
 const MainView = () => {
   const { uid, plan, form, confirm } = useFormModel();

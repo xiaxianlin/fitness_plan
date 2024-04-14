@@ -29,9 +29,8 @@ const ListView = () => {
     <Row className="home" align="stretch">
       {plans.map((plan) => {
         return (
-          <Col className="home-item" span={8}>
+          <Col key={plan.uid} className="home-item" span={8}>
             <PlanCard
-              key={plan.uid}
               plan={plan}
               onEdit={() => gotoFormPage(plan.uid!)}
               onDetail={() => gotoDetailPage(plan.uid!)}
