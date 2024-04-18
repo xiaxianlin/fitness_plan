@@ -25,7 +25,7 @@
   },
   "scripts": {
     "start": "craco start",
-    "build": "craco craco",
+    "build": "craco build",
     "deploy": "./build.sh"
   },
   "eslintConfig": {
