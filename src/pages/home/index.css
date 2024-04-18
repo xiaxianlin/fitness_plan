@@ -3,6 +3,9 @@
   display: flex;
   justify-content: stretch;
   align-items: stretch;
+
+  max-width: 50%;
+  flex: 0 0 50%;
 }
 
 .home-add {
@@ -25,4 +28,11 @@
 
 .home-add:hover {
   color: #eee;
+}
+
+@media (min-width: 1024px) {
+  .home-item {
+    max-width: 33.3333%;
+    flex: 0 0 33.3333%;
+  }
 }

@@ -29,7 +29,7 @@ const ListView = () => {
     <Row className="home" align="stretch">
       {plans.map((plan) => {
         return (
-          <Col key={plan.uid} className="home-item" span={8}>
+          <Col key={plan.uid} className="home-item">
             <PlanCard
               plan={plan}
               onEdit={() => gotoFormPage(plan.uid!)}
@@ -40,7 +40,7 @@ const ListView = () => {
           </Col>
         );
       })}
-      <Col span={8} className="home-item">
+      <Col className="home-item">
         <Link to="/form" className="home-add">
           <PlusOutlined className="home-add-icon" />
         </Link>
