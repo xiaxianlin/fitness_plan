@@ -1,7 +1,12 @@
-import React from 'react'
+import { ExecModel } from './models';
+import MainView from './views/Main';
 
 const ExecPage = () => {
-    return <div>ExecPage</div>
-}
+  return (
+    <ExecModel.Provider>
+      <MainView />
+    </ExecModel.Provider>
+  );
+};
 
-export default ExecPage
+export default ExecPage;

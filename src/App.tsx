@@ -1,27 +1,15 @@
-import React from 'react';
-import { ConfigProvider, Flex, theme } from 'antd';
-import { createBrowserRouter, createRoutesFromElements, Outlet, Route, RouterProvider } from 'react-router-dom';
+import { ConfigProvider, theme } from 'antd';
+import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom';
 import HomePage from '@pages/home';
 import FormPage from '@pages/form';
 import DetailPage from '@pages/detail';
 import ExecPage from '@pages/exec';
-
-const Layout = () => {
-  return (
-    <Flex vertical className="layout">
-      <header className="layout-header">FITNESS</header>
-      <div className="layout-body">
-        <div className="layout-container">
-          <Outlet />
-        </div>
-      </div>
-    </Flex>
-  );
-};
+import { LayoutModel } from '@models/layout';
+import AppLayout from '@layouts/AppLayout';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<Layout />}>
+    <Route path="/" element={<AppLayout />}>
       <Route index element={<HomePage />} />
       <Route path="/form">
         <Route index element={<FormPage />} />
@@ -40,7 +28,9 @@ ConfigProvider.config({
 const App = () => {
   return (
     <ConfigProvider theme={{ algorithm: theme.darkAlgorithm }}>
-      <RouterProvider router={router} />
+      <LayoutModel.Provider>
+        <RouterProvider router={router} />
+      </LayoutModel.Provider>
     </ConfigProvider>
   );
 };

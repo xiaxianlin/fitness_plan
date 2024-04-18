@@ -1,5 +1,4 @@
-import { Descriptions, Flex, FloatButton, Form, Input, Spin } from 'antd';
-import Phase from '@pages/form/components/Phase';
+import { Descriptions, Flex, FloatButton, Spin } from 'antd';
 import { useDetailModel } from '@pages/detail/models';
 import { BlockBox } from '@components';
 import PhaseInfo from '@pages/detail/components/Phase';

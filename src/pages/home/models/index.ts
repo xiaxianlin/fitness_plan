@@ -14,11 +14,15 @@ const useContainer = () => {
     navigate(`/form/${uid}`);
   };
 
+  const gotoExecPage = (uid: string) => {
+    navigate(`/exec/${uid}`);
+  };
+
   const gotoDetailPage = (uid: string) => {
     navigate(`/detail/${uid}`);
   };
 
-  return { plans, handleDelete, gotoFormPage, gotoDetailPage };
+  return { plans, handleDelete, gotoFormPage, gotoExecPage, gotoDetailPage };
 };
 
 export const HomeModel = createContainer(useContainer);

@@ -42,14 +42,16 @@ const Phase: React.FC<PhaseProps> = ({ value = [], onChange }) => {
       width: 80,
       render: (_, row) => (
         <>
-          <EditOutlined
+          <Button
+            size="small"
+            icon={<EditOutlined />}
             style={{ marginRight: 8 }}
             onClick={() => {
               setGroup(row);
               setVisible(true);
             }}
           />
-          <DeleteOutlined onClick={() => onChange?.(value.filter((g) => g.uid !== row.uid))} />
+          <Button size="small" icon={<DeleteOutlined />} onClick={() => onChange?.(value.filter((g) => g.uid !== row.uid))} />
         </>
       ),
     },
